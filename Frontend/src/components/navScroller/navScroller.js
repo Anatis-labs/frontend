@@ -9,13 +9,16 @@ export default class NavScroller extends Component {
             Start
           </a>  
           <a class="p-2 text-muted" href="#">
-            Seminarien
+            Kommande Seminarien
+          </a>
+          <a class="p-2 text-muted" href="#">
+            Seminarien som har varit
           </a>
           <a class="p-2 text-muted" href="#">
             Lärare
           </a>
           <a class="p-2 text-muted" href="#">
-            Tre i rad
+            Admin
           </a>
                       
         </nav>

@@ -9,7 +9,7 @@ export default class PostListing extends Component {
     };
   }
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch("API LINK")
       .then((response) => response.json())
       .then((json) => this.setState({ list: json }));
   }
