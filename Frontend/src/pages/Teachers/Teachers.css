@@ -1,0 +1,23 @@
+
+.mainDiv{
+    display: flex;
+    align-content: center;
+}
+
+.column {
+    float: flex;
+    width: 50%;
+    padding: 10px;  
+}
+
+.left {
+    width: 50%;
+    align-content: center;
+    text-align: center;
+  }
+  
+  .right {
+    width:50%;
+    align-content: center;
+    text-align: center;
+  }
