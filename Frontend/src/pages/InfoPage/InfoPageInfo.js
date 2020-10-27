@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import JumboPost from "../jumbopost"
+import InfoPage from "./InfoPage";
 
-export default class JumboSeminars extends Component {
+export default class InfoPageInfo extends Component {
   constructor() {
     super();
     this.state = {
@@ -16,8 +16,8 @@ export default class JumboSeminars extends Component {
   render() {
     return (
       <div class="row mb-2">
-        {this.state.seminar.map((item) => (
-          <JumboPost category={item.id} title={item.title} date={item.date} description={item.description}/>
+        {this.state.seminar.((item) => (
+          <InfoPage category={item.id} title={item.title} date={item.date} description={item.description}/>
         ))}
       </div>
     );

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import ModalApp from "../ModalApp";
 
 export default class Post extends Component {
+
   render() {
     return (
       <div class="col-md-6">
@@ -13,30 +15,11 @@ export default class Post extends Component {
             <div class="mb-1 text-muted">{this.props.date}</div>
             <p class="card-text mb-auto">
             {this.props.description}
-            </p>
-            <a href={this.props.id} class="stretched-link" >
-              Klicka här för mer info
-            </a>
-          </div>
-          <div class="col-auto d-none d-lg-block">
-            <svg
-              class="bd-placeholder-img"
-              width="200"
-              height="250"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
-              aria-label="Placeholder: Thumbnail"
-            >
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#55595c" />
-              <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                Thumbnail
-              </text>
-            </svg>
-          </div>
+            </p> 
+            Föreläsningen är: {this.props.duration} minuter lång.        
+          </div>          
         </div>
+        <ModalApp/>
       </div>
     );
   }

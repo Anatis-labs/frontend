@@ -13,9 +13,12 @@ export default class FetchUsers extends Component {
       .then((response) => response.json())
       .then((json) => this.setState({ user: json }));
   }
+  handleClickEvent(id) {
+    this.props.onUserClick(id);
+  }
   render() {
     return (
-      <div class="row mb-2">
+      <div>
         {this.state.user.map((item) => (
           <ListUsers id={item.id} name={item.name} Roll={item.description}/>
         ))}

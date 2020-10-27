@@ -3,9 +3,11 @@ import {BrowserRouter as Router, Switch,Route} from 'react-router-dom';
 
 import AddSeminar from './tasks/Add';
 import AdminMenu from "./AdminMenu";
-import RemoveSeminar from "./tasks/Remove";
-import ListUsers from "./tasks/ListUsers";
+import RemoveSeminar from "./tasks/RemoveSeminars";
+import FetchUsers from "./tasks/FetchUser";
 import AdminStart from "./AdminStart";
+
+
 
 
 export default class Admin extends Component {
@@ -18,10 +20,10 @@ export default class Admin extends Component {
             <>
             <AdminMenu />
         <Router>
-            <Switch>
+            <Switch> 
                 <Route path="/admin/add" component={AddSeminar}/>  
                 <Route path="/admin/remove" component={RemoveSeminar}/>  
-                <Route path="/admin/users" component={ListUsers}/>  
+                <Route path="/admin/users" component={FetchUsers}/>                   
                 <Route path="/admin" component={AdminStart}/>             
                 </Switch>
                 </Router>

@@ -3,14 +3,15 @@ import React, { Component } from 'react';
 export default class AddSeminar extends Component {
     constructor() {
         super();
-        this.state = { titel: '', description: '', date: ''};
+        this.state = {titel: '', description: '',duration: '' , date: ''};
     }
     saveSeminar() {
         fetch('https://localhost:44350/api/seminars', {
             method: 'POST',
-            body: JSON.stringify({
+            body: JSON.stringify({                
                 title: this.state.title,
                 description: this.state.description,
+                duration: this.state.duration,
                 date: this.state.date,
             }), 
             headers: { 'Content-type': 'application/json; charset=UTF-8'}
@@ -36,7 +37,7 @@ export default class AddSeminar extends Component {
                     onChange={(e) => this.setState({ description: e.target.value })}
                 />
                 <p></p>
-                date: 
+                Date: 
                 <p></p>
                 <input
                     type='text'
@@ -44,6 +45,15 @@ export default class AddSeminar extends Component {
                     onChange={(e) => this.setState({ date: e.target.value })}
                 />
                 <p></p>
+                Duration
+                <p></p>
+                <input
+                    type='int'
+                    value={this.state.duration}
+                    onChange={(e) => this.setState({ duration: e.target.value })}
+                />
+                <p></p>
+                
                 <button onClick={() => this.saveSeminar()}>Save</button>
             </div>
         )
