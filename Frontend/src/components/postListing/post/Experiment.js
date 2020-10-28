@@ -11,7 +11,7 @@ export default class Experiment extends Component {
         {
             method: 'POST',
             body: JSON.stringify({
-                seminarId: 2,
+                seminarId: this.state.id,
                 name: this.state.name,     
                 email: this.state.email,
             }), 
@@ -23,6 +23,14 @@ export default class Experiment extends Component {
         return (
             <div>
                 <div className="Stuff">
+                id:
+                <p></p>                
+                <input 
+                    type='text' 
+                    value={this.state.id} 
+                    onChange={(e) => this.setState({ id: e.target.value })}
+                />
+                <p></p>   
                 Namn:
                 <p></p>                
                 <input 

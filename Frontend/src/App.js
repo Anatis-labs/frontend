@@ -9,8 +9,7 @@ import PageHeader from "./components/PageHeader/PageHeader";
 import Construction from "./pages/Construction/construction";
 import Teachers from "./pages/Teachers/Teachers";
 import Admin from "./pages/Admin/Admin";
-
-
+import ModalApp from "./components/postListing/ModalApp";
 
 function App() {
   return (
@@ -27,6 +26,7 @@ function App() {
           <Route path="/signin" component={Construction}/> 
           <Route path="/seminarien" render={props =>
           <div>         
+          <ModalApp/>
           <PostListing/>
           </div>}/>
           </Switch>    

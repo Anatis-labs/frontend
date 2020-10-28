@@ -18,7 +18,6 @@ export default class Post extends Component {
             Föreläsningen är: {this.props.duration} minuter lång.        
           </div>          
         </div>
-        <ModalApp/>
       </div>
     );
   }
