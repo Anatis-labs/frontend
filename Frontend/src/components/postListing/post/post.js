@@ -12,9 +12,8 @@ export default class Post extends Component {
               {this.props.id}
             </strong>
             <h3 class="mb-0">{this.props.title}</h3>
-            <div class="mb-1 text-muted">{this.props.date}</div>
-            <p class="card-text mb-auto">
-            {this.props.description}
+            <div class="mb-1 text-muted">Föreläsningen äger rum: {this.props.date}</div>
+            <p class="card-text mb-auto">Innehåll: {this.props.description}
             </p> 
             Föreläsningen är: {this.props.duration} minuter lång.        
           </div>          

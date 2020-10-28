@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import Experiment from './post/Experiment'
+import "./Modal.css";
 
 const MODAL_STYLES = {
   position: 'fixed',
@@ -29,11 +30,11 @@ export default function Modal({ open, children, onClose }) {
     <>
       <div style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
-        <Experiment/>
+        <Experiment id={this.state.id}/>
         <p></p>
-        <button onClick={onClose}>Stäng fönster</button>
+        <button className="stäng" onClick={onClose}>Stäng fönster</button>
         {children}
-      </div>
+      </div>   
     </>,
     document.getElementById('portal')
   )

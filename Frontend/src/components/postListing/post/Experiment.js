@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 
 export default class Experiment extends Component {
-    constructor() {
-        super();
-        this.state = { SemninarId: '', userId: '', name: '', email: ''};
-    }
     
     saveToSeminar() {
         fetch('https://localhost:44350/api/UserSeminar', {
@@ -13,7 +9,7 @@ export default class Experiment extends Component {
                 seminarId: this.state.seminarId,
                 userId: this.state.userId,
                 name: this.state.name,     
-                email: this.state.email, 
+                email: this.state.email,
             }), 
             headers: { 'Content-type': 'application/json; charset=UTF-8'}
         });
@@ -27,16 +23,16 @@ export default class Experiment extends Component {
                 <p></p>                
                 <input 
                     type='text' 
-                    value={this.props.userId} 
-                    onChange={(e) => this.setState({ title: e.target.value })}
+                    value={this.props.name} 
+                    onChange={(e) => this.setState({ name: e.target.value })}
                 />
                 <p></p>
-                Elev/Lärare: 
+                Email: 
                 <p></p>
                 <input
                     type='text'
-                    value={this.props.seminarId}
-                    onChange={(e) => this.setState({ description: e.target.value })}
+                    value={this.props.email}
+                    onChange={(e) => this.setState({ email: e.target.value })}
                 />
                 <p></p>
                 

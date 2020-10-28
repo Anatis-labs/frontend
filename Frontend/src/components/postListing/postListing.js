@@ -23,7 +23,7 @@ export default class PostListing extends Component {
         ))}
       </div>
         {this.state.seminar.map((item) => (
-          <Modal id={item.id} title={item.title} date={item.date} description={item.description}/>
+          <Modal id={item.id} title={item.title} date={item.date} description={item.description} />
         ))}
       </>
     );
