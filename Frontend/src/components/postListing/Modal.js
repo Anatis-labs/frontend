@@ -30,7 +30,7 @@ export default function Modal({ open, children, onClose }) {
     <>
       <div style={OVERLAY_STYLES} />
       <div style={MODAL_STYLES}>
-        <Experiment id={this.state.id}/>
+        <Experiment />
         <p></p>
         <button className="stäng" onClick={onClose}>Stäng fönster</button>
         {children}

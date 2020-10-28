@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ListUsers from "./ListUsers";
+import RemoveUser from "./RemoveUser";
+import "./FetchUser.css"
 
 export default class FetchUsers extends Component {
   constructor() {
@@ -19,9 +21,14 @@ export default class FetchUsers extends Component {
   render() {
     return (
       <div>
+        <div className="column">  
         {this.state.user.map((item) => (
-          <ListUsers id={item.id} name={item.name} Roll={item.description}/>
+          <ListUsers id={item.id} name={item.name} email={item.email}/>
         ))}
+        </div>
+        <div className="column">
+          <RemoveUser/>
+          </div>
       </div>
     );
   }

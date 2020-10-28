@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 
 export default class Experiment extends Component {
-    
+    constructor() {
+        super();
+        this.state = {seminarId: '', name: '', email: ''};
+    }
+
     saveToSeminar() {
-        fetch('https://localhost:44350/api/UserSeminar', {
+        fetch('https://localhost:44350/api/UserSeminar/', 
+        {
             method: 'POST',
             body: JSON.stringify({
-                seminarId: this.state.seminarId,
-                userId: this.state.userId,
+                seminarId: 2,
                 name: this.state.name,     
                 email: this.state.email,
             }), 
@@ -23,7 +27,7 @@ export default class Experiment extends Component {
                 <p></p>                
                 <input 
                     type='text' 
-                    value={this.props.name} 
+                    value={this.state.name} 
                     onChange={(e) => this.setState({ name: e.target.value })}
                 />
                 <p></p>
@@ -31,7 +35,7 @@ export default class Experiment extends Component {
                 <p></p>
                 <input
                     type='text'
-                    value={this.props.email}
+                    value={this.state.email}
                     onChange={(e) => this.setState({ email: e.target.value })}
                 />
                 <p></p>
