@@ -9,13 +9,15 @@ export default class Post extends Component {
         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
           <div class="col p-4 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2 text-primary">
-              {this.props.id}
+             Seminarie Id: {this.props.id}
             </strong>
             <h3 class="mb-0">{this.props.title}</h3>
+            <p></p>
             <div class="mb-1 text-muted">Föreläsningen äger rum: {this.props.date}</div>
             <p class="card-text mb-auto">Innehåll: {this.props.description}
-            </p> 
-            Föreläsningen är: {this.props.duration} minuter lång.        
+            </p>
+            <p></p>
+            Föreläsningen är: {this.props.duration} minuter lång.
           </div>          
         </div>
       </div>

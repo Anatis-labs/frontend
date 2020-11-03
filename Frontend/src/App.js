@@ -10,6 +10,7 @@ import Construction from "./pages/Construction/construction";
 import Teachers from "./pages/Teachers/Teachers";
 import Admin from "./pages/Admin/Admin";
 import ModalApp from "./components/postListing/ModalApp";
+import Welcome from "./pages/Welcome";
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
           <ModalApp/>
           <PostListing/>
           </div>}/>
+          <Route path="/" render={props =>
+          <div>         
+          <Welcome/>
+          </div>}/> 
           </Switch>    
           </Router>
       </div>
